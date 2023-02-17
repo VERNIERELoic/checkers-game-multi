@@ -5,7 +5,7 @@ import javafx.print.PrintColor;
 /**
  * @author francoiseperrin
  *
- *         Coordonn�es des PieceModel
+ *         Coordonnees des PieceModel
  */
 public class Coord implements Comparable<Coord> {
 
@@ -61,11 +61,11 @@ public class Coord implements Comparable<Coord> {
 	 * 
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 * 
-	 * La m�thode compareTo() indique comment comparer un objet � l'objet courant
+	 * La methode compareTo() indique comment comparer un objet e l'objet courant
 	 * selon l'ordre dit naturel
-	 * Dans cet application, nous d�cidons que l'ordre naturel est celui
-	 * correspondant au N� de la case d'un tableau 2D repr�sent� par la Coord
-	 * ainsi le N� 1 correspond � la Coord ['a', 10], le N� 100 correspond � la
+	 * Dans cet application, nous decidons que l'ordre naturel est celui
+	 * correspondant au Ne de la case d'un tableau 2D represente par la Coord
+	 * ainsi le Ne 1 correspond e la Coord ['a', 10], le Ne 100 correspond e la
 	 * Coord ['j', 1]
 	 */
 

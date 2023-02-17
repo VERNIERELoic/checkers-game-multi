@@ -14,12 +14,12 @@ public class ModelFactory {
 		// Collection<PieceModel> pieces = new HashSet<PieceModel>();
 		// Collection<PieceModel> pieces = new TreeSet<PieceModel>();
 				
-		// Création des pion blancs et ajout dans la collection de pièces
+		// Creation des pion blancs et ajout dans la collection de pieces
 		for ( Coord coord : ModelConfig.WHITE_PIECE_COORDS){
 			pieces.add(new PawnModel(coord, PieceSquareColor.WHITE));
 		}
 
-		// Création des pions noirs et ajout dans la collection de pièces
+		// Creation des pions noirs et ajout dans la collection de pieces
 		for ( Coord coord : ModelConfig.BLACK_PIECE_COORDS){
 			pieces.add(new PawnModel(coord, PieceSquareColor.BLACK));
 		}

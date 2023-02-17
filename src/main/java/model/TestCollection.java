@@ -22,29 +22,29 @@ public class TestCollection {
 
 	public static void main(String[] args) {
 		
-		// la collection de pièces en jeu - mélange noires et blanches
+		// la collection de pieces en jeu - melange noires et blanches
 		Collection<PieceModel> pieces = null ;	
 	
 		
-		/* Implémentation de la Collection par une LinkedList 
+		/* Implementation de la Collection par une LinkedList 
 		
 		* Remplissage 
-		* Affichage selon l'ordre d'insertion dans collection - 5 pièces par ligne
-		* Puis tests de différents algos de tri avec affichage
+		* Affichage selon l'ordre d'insertion dans collection - 5 pieces par ligne
+		* Puis tests de differents algos de tri avec affichage
 		* */
 		pieces = new LinkedList<PieceModel>();
 		pieces = fillCollection(pieces);
 		System.out.println("Affichage LinkedList selon l'ordre d'insertion dans collection");
 		System.out.println(getRender(pieces));
 		
-//		TestSortList(pieces); // Test de tri de la liste implémentée par une LinkedList
+//		TestSortList(pieces); // Test de tri de la liste implementee par une LinkedList
 //
 //		
-//		/* Implémentation de la Collection par une ArrayList 
+//		/* Implementation de la Collection par une ArrayList 
 //		
 //		* Remplissage 
 //		* Affichage selon l'ordre d'insertion dans collection
-//		* Puis tests de différents algos de tri avec affichage
+//		* Puis tests de differents algos de tri avec affichage
 //		* */
 //		pieces = new ArrayList<PieceModel>();
 //		pieces = fillCollection(pieces);
@@ -52,10 +52,10 @@ public class TestCollection {
 //		System.out.println(getRender(pieces));
 //		TestSortList(pieces);
 //		
-//		/* Implémentation de la Collection par un HashSet  
+//		/* Implementation de la Collection par un HashSet  
 //		
-//		* Remplissage 1 série de pions blancs et de pions noirs
-//		*    puis 2 séries de pions noirs
+//		* Remplissage 1 serie de pions blancs et de pions noirs
+//		*    puis 2 series de pions noirs
 //		* Affichage selon l'ordre d'insertion dans collection 
 //		*    <-- KO avant MAJ classe AbstractPiece
 //		* Puis tests tri <-- KO
@@ -67,7 +67,7 @@ public class TestCollection {
 ////		Collections.sort((Set<PieceModel>) pieces); // --> KO compilation : pas tri sur Set
 //	
 //		
-//		/* Implémentation de la Collection par un TreeSet  
+//		/* Implementation de la Collection par un TreeSet  
 //		
 //		* Remplissage 
 //		* Affichage selon l'ordre d'insertion dans collection 
@@ -82,18 +82,18 @@ public class TestCollection {
 	
 	private static Collection<PieceModel> fillCollection(Collection<PieceModel> pieces) {
 		
-		// Création des pion blancs et ajout dans la collection de pièces
+		// Creation des pion blancs et ajout dans la collection de pieces
 		for ( Coord coord : ModelConfig.WHITE_PIECE_COORDS){
 			pieces.add(new PawnModel(coord, PieceSquareColor.WHITE));
 		}
 
-		// Création des pions noirs et ajout dans la collection de pièces
+		// Creation des pions noirs et ajout dans la collection de pieces
 		for ( Coord coord : ModelConfig.BLACK_PIECE_COORDS){
 			pieces.add(new PawnModel(coord, PieceSquareColor.BLACK));
 		}
 
-		//	// Création des pions noirs et ajout à nouveau dans la collection de pièces
-		//  // Utile pour vérifier pb hashcode sur les hashSet
+		//	// Creation des pions noirs et ajout e nouveau dans la collection de pieces
+		//  // Utile pour verifier pb hashcode sur les hashSet
 		//	for ( Coord coord : ModelConfig.BLACK_PIECE_COORDS){
 		//		pieces.add(new PawnModel(coord, PieceSquareColor.BLACK));
 		//	}
@@ -103,7 +103,7 @@ public class TestCollection {
 
 	private static void TestSortList(Collection<PieceModel> pieces) {
 
-//		// Affichage dans ordre croissant des cases sur le damier (de 0 à 99)
+//		// Affichage dans ordre croissant des cases sur le damier (de 0 e 99)
 //		// Tri selon ordre naturel des PieceModel
 //		Collections.sort((List<PieceModel>) pieces); 
 //		System.out.println("Affichage selon l'ordre croissant des cases");
@@ -128,7 +128,7 @@ public class TestCollection {
 				st+= "\n";
 		}
 		
-		// Parcours collection en utilisant un itérateur ou un ListIterator
+		// Parcours collection en utilisant un iterateur ou un ListIterator
 		// TODO
 		
 		return st;	

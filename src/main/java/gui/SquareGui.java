@@ -16,20 +16,20 @@ import nutsAndBolts.PieceSquareColor;
 /**
  * @author francoiseperrin
  * 
- * Classe d'affichage des carr�s du damier
- * leur couleur est initialis� par les couleurs par d�faut du jeu
+ * Classe d'affichage des carres du damier
+ * leur couleur est initialise par les couleurs par defaut du jeu
  *
  */
 class SquareGui extends BorderPane implements CheckersSquareGui {
 	
-	private PieceSquareColor squareColor;    		// le carr� est Noir ou Blanc
+	private PieceSquareColor squareColor;    		// le carre est Noir ou Blanc
 
 	public SquareGui (PieceSquareColor squareColor) {
 		// ToDo Atelier 2
 	}
 	
 	/**
-	 *Retourne l'indice du carr� sur la grille (N� de 0 � 99)
+	 *Retourne l'indice du carre sur la grille (Ne de 0 e 99)
 	 */
 	@Override
 	public int getSquareCoord() {

@@ -10,19 +10,19 @@ import nutsAndBolts.PieceSquareColor;
  * 
  *         Cete classe fabrique et stocke toutes les PieceModel du Model dans
  *         une collection
- *         elle est donc responsable de rechercher et mettre � jour les
+ *         elle est donc responsable de rechercher et mettre e jour les
  *         PieceModel (leur position)
- *         En r�alit�, elle d�l�gue � une fabrique le soin de fabriquer les
+ *         En realite, elle delegue e une fabrique le soin de fabriquer les
  *         bonnes PieceModel
- *         avec les bonnes coordonn�es
+ *         avec les bonnes coordonnees
  * 
- *         En revanche, elle n'est pas responsable des algorithme m�tiers li�s
- *         au d�placement des pi�ces
- *         (responsabilit� de la classe Model)
+ *         En revanche, elle n'est pas responsable des algorithme metiers lies
+ *         au deplacement des pieces
+ *         (responsabilite de la classe Model)
  */
 public class ModelImplementor {
 
-	// la collection de pi�ces en jeu - m�lange noires et blanches
+	// la collection de pieces en jeu - melange noires et blanches
 	private Collection<PieceModel> pieces;
 
 	public ModelImplementor() {
@@ -88,9 +88,9 @@ public class ModelImplementor {
 
 	/**
 	 * @param coord
-	 * @return la pi�ce qui se trouve aux coordonn�es indiqu�es
+	 * @return la piece qui se trouve aux coordonnees indiquees
 	 */
-	PieceModel findPiece(Coord coord) { // TODO : mettre en "private" apr�s test unitaires
+	PieceModel findPiece(Coord coord) { // TODO : mettre en "private" apres test unitaires
 
 		PieceModel findPiece = null;
 
@@ -108,8 +108,8 @@ public class ModelImplementor {
 	 * 
 	 * @see java.lang.Object#toString()
 	 * 
-	 * La m�thode toStrong() retourne une repr�sentation
-	 * de la liste de pi�ces sous forme d'un tableau 2D
+	 * La methode toStrong() retourne une representation
+	 * de la liste de pieces sous forme d'un tableau 2D
 	 * 
 	 */
 	public String toString() {
@@ -117,7 +117,7 @@ public class ModelImplementor {
 		String st = "";
 		String[][] damier = new String[ModelConfig.LENGTH][ModelConfig.LENGTH];
 
-		// cr�ation d'un tableau 2D avec les noms des pi�ces � partir de la liste de pi�ces
+		// creation d'un tableau 2D avec les noms des pieces e partir de la liste de pieces
 		for(PieceModel piece : this.pieces) {
 
 		PieceSquareColor color = piece.getPieceColor();
@@ -128,7 +128,7 @@ public class ModelImplementor {
 		damier[lig][col ] = stColor ;
 		}
 
-		// Affichage du tableau formatt�
+		// Affichage du tableau formatte
 		st = "     a      b      c      d      e      f      g      h      i      j\n";
 		for (int lig = 9; lig >= 0; lig--) {
 			st += (lig + 1) + "  ";
