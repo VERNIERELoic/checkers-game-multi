@@ -9,8 +9,8 @@ import javafx.print.PrintColor;
  */
 public class Coord implements Comparable<Coord> {
 
-	private char colonne; // ['a'..'j']
-	private int ligne; // [10..1]
+	char colonne; // ['a'..'j']
+	int ligne; // [10..1]
 	static final int MAX = ModelConfig.LENGTH; // 10
 
 	public Coord(char colonne, int ligne) {
@@ -82,9 +82,13 @@ public class Coord implements Comparable<Coord> {
 
 	@Override
 	public int compareTo(Coord o) {
-		int ret = 999;
-
-		return ret;
+		if (o.ligne == this.ligne && (int) o.colonne == (int) this.colonne) {
+			return 0;
+		} else if (o.ligne < this.ligne || (int) o.colonne < (int) this.colonne) {
+			return -1;
+		} else {
+			return 1;
+		}
 	}
 
 }

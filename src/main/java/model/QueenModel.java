@@ -8,7 +8,7 @@ import nutsAndBolts.PieceSquareColor;
 /**
  * @author francoiseperrin
  *
- *le mode de déplacement et de prise de la reine est différent de celui du pion
+ *le mode de dï¿½placement et de prise de la reine est diffï¿½rent de celui du pion
  */
 public class QueenModel implements PieceModel {
 

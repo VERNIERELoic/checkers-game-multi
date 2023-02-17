@@ -12,7 +12,6 @@ public class PawnModel implements PieceModel {
 
 	public PawnModel(Coord coord, PieceSquareColor pieceColor) {
 		super();
-
 		this.coord = coord;
 		this.pieceColor = pieceColor;
 
@@ -20,33 +19,28 @@ public class PawnModel implements PieceModel {
 
 	@Override
 	public char getColonne() {
-		char colonne = coord.getColonne();
-
+		char colonne = this.coord.colonne;
 		return colonne;
 	}
 
 	@Override
 	public int getLigne() {
-		int ligne = coord.getLigne();
-		
+		int ligne = this.coord.ligne;
 		return ligne;
 	}
 
 	@Override
 	public boolean hasThisCoord(Coord coord) {
 		boolean hasThisCoord = false;
-
-		// TODO Atelier 1
-
+		if (this.coord.compareTo(coord) == 0) {
+			hasThisCoord = true;
+		}
 		return hasThisCoord;
 	}
 
 	@Override
 	public PieceSquareColor getPieceColor() {
-		PieceSquareColor color = null;
-
-		// TODO Atelier 1
-
+		PieceSquareColor color = this.pieceColor;
 		return color;
 	}
 
@@ -59,24 +53,30 @@ public class PawnModel implements PieceModel {
 	public String toString() {
 		String st = null;
 
-		// TODO Atelier 1
+		st = pieceColor + "[" + this.coord.ligne + "," + this.coord.colonne + "]";
 
 		return st;
 	}
 
 	@Override
 	public void move(Coord coord) {
-
-		// TODO Atelier 1
-
+		this.coord.colonne = coord.colonne;
+		this.coord.ligne = coord.ligne;
 	}
 
 	@Override
 	public boolean isMoveOk(Coord targetCoord, boolean isPieceToCapture) {
+
 		boolean ret = false;
 
-		// TODO Atelier 1
+		int distanceX = Math.abs(targetCoord.ligne - this.coord.ligne);
+		int distanceY = Math.abs((int) targetCoord.colonne - (int) this.coord.colonne);
 
+		if (isPieceToCapture) {
+			ret = distanceX == distanceY && distanceX == 2;
+		} else {
+			ret = distanceX == distanceY && distanceX == 1;
+		}
 		return ret;
 	}
 
