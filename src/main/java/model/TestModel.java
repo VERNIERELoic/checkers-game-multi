@@ -82,6 +82,7 @@ public class TestModel {
 		System.out.println("movePiece ('b',4) -> ('c',5) = " + 
 							modelImpl.movePiece(new Coord('b',4), new Coord('c',5)));	// true : move OK
 
+		System.out.println(modelImpl.toString());
 //
 //		//////////////////////////////////
 //		// Test classe Model

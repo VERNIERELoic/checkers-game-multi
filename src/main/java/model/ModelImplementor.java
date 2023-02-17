@@ -117,17 +117,16 @@ public class ModelImplementor {
 		String st = "";
 		String[][] damier = new String[ModelConfig.LENGTH][ModelConfig.LENGTH];
 
-		// // cr�ation d'un tableau 2D avec les noms des pi�ces � partir de la liste de
-		// pi�ces
-		// for(PieceModel piece : this.pieces) {
+		// cr�ation d'un tableau 2D avec les noms des pi�ces � partir de la liste de pi�ces
+		for(PieceModel piece : this.pieces) {
 
-		// PieceSquareColor color = piece.getPieceColor();
-		// String stColor = (PieceSquareColor.WHITE.equals(color) ? "--B--" : "--N--" );
+		PieceSquareColor color = piece.getPieceColor();
+		String stColor = (PieceSquareColor.WHITE.equals(color) ? "--B--" : "--N--" );
 
-		// int col = piece.getColonne() -'a';
-		// int lig = piece.getLigne() -1;
-		// damier[lig][col ] = stColor ;
-		// }
+		int col = piece.getColonne() -'a';
+		int lig = piece.getLigne() -1;
+		damier[lig][col ] = stColor ;
+		}
 
 		// Affichage du tableau formatt�
 		st = "     a      b      c      d      e      f      g      h      i      j\n";
