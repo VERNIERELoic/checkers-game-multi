@@ -7,9 +7,9 @@ import nutsAndBolts.PieceSquareColor;
 /**
  * @author francoise.perrin
  * 
- * Objet créé par le Model dans méthode MoveCapturePromote()
- * à destination du Controller qui en extrait les données pour créer
- * l'objet InputViewModel à destination de la View
+ * Objet cre par le Model dans methode MoveCapturePromote()
+ * e destination du Controller qui en extrait les donnees pour creer
+ * l'objet InputViewModel e destination de la View
  * 
  */
 public class OutputModelData<T> implements Serializable{

@@ -7,9 +7,9 @@ import nutsAndBolts.PieceSquareColor;
 /**
  * @author francoise.perrin
  *
- * Objet à destination de la View
- * créé par le Controller
- * à partir des données retournées par le Model
+ * Objet e destination de la View
+ * cre par le Controller
+ * e partir des donnees retournees par le Model
  * 
  */
 public class InputViewData<T> implements Serializable{
