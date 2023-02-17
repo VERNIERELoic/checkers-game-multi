@@ -1,12 +1,11 @@
 package model;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
 import nutsAndBolts.PieceSquareColor;
 
-public class PawnModel implements PieceModel{
+public class PawnModel implements PieceModel {
 
 	private Coord coord;
 	private PieceSquareColor pieceColor;
@@ -14,32 +13,29 @@ public class PawnModel implements PieceModel{
 	public PawnModel(Coord coord, PieceSquareColor pieceColor) {
 		super();
 
-		// TODO Atelier 1
+		this.coord = coord;
+		this.pieceColor = pieceColor;
 
 	}
 
 	@Override
 	public char getColonne() {
-		char colonne = ' ';
-		
-		// TODO Atelier 1
+		char colonne = coord.getColonne();
 
 		return colonne;
 	}
 
 	@Override
 	public int getLigne() {
-		int ligne = -1;
+		int ligne = coord.getLigne();
 		
-		// TODO Atelier 1
-
 		return ligne;
 	}
 
 	@Override
 	public boolean hasThisCoord(Coord coord) {
 		boolean hasThisCoord = false;
-		
+
 		// TODO Atelier 1
 
 		return hasThisCoord;
@@ -48,13 +44,15 @@ public class PawnModel implements PieceModel{
 	@Override
 	public PieceSquareColor getPieceColor() {
 		PieceSquareColor color = null;
-		
+
 		// TODO Atelier 1
 
-		return color;	
+		return color;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -85,13 +83,11 @@ public class PawnModel implements PieceModel{
 	@Override
 	public List<Coord> getCoordsOnItinerary(Coord targetCoord) {
 
-		List<Coord> coordsOnItinery = new LinkedList<Coord>(); 
+		List<Coord> coordsOnItinery = new LinkedList<Coord>();
 
 		// TODO Atelier 2
 
 		return coordsOnItinery;
 	}
 
-	
 }
-
