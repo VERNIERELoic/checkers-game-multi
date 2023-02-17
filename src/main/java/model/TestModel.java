@@ -70,18 +70,18 @@ public class TestModel {
 //		//////////////////////////////////
 //
 		System.out.println("\nTest classe ModelImplementor");
-//		ModelImplementor modelImpl = new ModelImplementor();
-//		System.out.println("findPieceModel ('b',4) = " + modelImpl.findPiece(new Coord('b',4)));	// [W[4,b]]
-//		System.out.println("findPieceModel ('b',6) = " + modelImpl.findPiece(new Coord('b',6)));	// null
-//		System.out.println("getPieceColor('b',4) = " + modelImpl.getPieceColor(new Coord('b',4)));	// WHITE
-//		System.out.println("getPieceColor('b',6) = " + modelImpl.getPieceColor(new Coord('b',6)));	// null
-//		System.out.println("isPiecehere('b',4) = " + modelImpl.isPiecehere(new Coord('b',4)));	// true 
-//		System.out.println("isPiecehere('b',6) = " + modelImpl.isPiecehere(new Coord('b',6)));	// false 
-//		System.out.println("isMovePieceOk ('b',4) -> ('c',5) = " + 
-//							modelImpl.isMovePieceOk(new Coord('b',4), new Coord('c',5),false));	// true
-//		System.out.println("movePiece ('b',4) -> ('c',5) = " + 
-//							modelImpl.movePiece(new Coord('b',4), new Coord('c',5)));	// true : move OK
-//
+		ModelImplementor modelImpl = new ModelImplementor();
+		System.out.println("findPieceModel ('b',4) = " + modelImpl.findPiece(new Coord('b',4)));	// [W[4,b]]
+		System.out.println("findPieceModel ('b',6) = " + modelImpl.findPiece(new Coord('b',6)));	// null
+		System.out.println("getPieceColor('b',4) = " + modelImpl.getPieceColor(new Coord('b',4)));	// WHITE
+		System.out.println("getPieceColor('b',6) = " + modelImpl.getPieceColor(new Coord('b',6)));	// null
+		System.out.println("isPiecehere('b',4) = " + modelImpl.isPiecehere(new Coord('b',4)));	// true 
+		System.out.println("isPiecehere('b',6) = " + modelImpl.isPiecehere(new Coord('b',6)));	// false 
+		System.out.println("isMovePieceOk ('b',4) -> ('c',5) = " + 
+							modelImpl.isMovePieceOk(new Coord('b',4), new Coord('c',5),false));	// true
+		System.out.println("movePiece ('b',4) -> ('c',5) = " + 
+							modelImpl.movePiece(new Coord('b',4), new Coord('c',5)));	// true : move OK
+
 //
 //		//////////////////////////////////
 //		// Test classe Model

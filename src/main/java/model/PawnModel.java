@@ -84,8 +84,7 @@ public class PawnModel implements PieceModel {
 	public List<Coord> getCoordsOnItinerary(Coord targetCoord) {
 
 		List<Coord> coordsOnItinery = new LinkedList<Coord>();
-
-		// TODO Atelier 2
+		coordsOnItinery.add(targetCoord);
 
 		return coordsOnItinery;
 	}
