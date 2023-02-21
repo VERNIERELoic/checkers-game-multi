@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import nutsAndBolts.PieceSquareColor;
@@ -74,23 +75,22 @@ public class ModelImplementor {
 
 	public void removePiece(Coord pieceToTakeCoord) {
 
-		// TODO Atelier 2
+		if (isPiecehere(pieceToTakeCoord)) {
+			pieces.remove(findPiece(pieceToTakeCoord));
+		}
 
 	}
 
 	public List<Coord> getCoordsOnItinerary(Coord initCoord, Coord targetCoord) {
-		List<Coord> coordsOnItinerary = null;
-
-		// TODO Atelier 2
-
-		return coordsOnItinerary;
+		//Atelier 2
+		return new LinkedList<Coord>();
 	}
 
 	/**
 	 * @param coord
 	 * @return la piece qui se trouve aux coordonnees indiquees
 	 */
-	PieceModel findPiece(Coord coord) { // TODO : mettre en "private" apres test unitaires
+	private PieceModel findPiece(Coord coord) { // TODO : mettre en "private" apres test unitaires
 
 		PieceModel findPiece = null;
 
@@ -117,15 +117,16 @@ public class ModelImplementor {
 		String st = "";
 		String[][] damier = new String[ModelConfig.LENGTH][ModelConfig.LENGTH];
 
-		// creation d'un tableau 2D avec les noms des pieces e partir de la liste de pieces
-		for(PieceModel piece : this.pieces) {
+		// creation d'un tableau 2D avec les noms des pieces e partir de la liste de
+		// pieces
+		for (PieceModel piece : this.pieces) {
 
-		PieceSquareColor color = piece.getPieceColor();
-		String stColor = (PieceSquareColor.WHITE.equals(color) ? "--B--" : "--N--" );
+			PieceSquareColor color = piece.getPieceColor();
+			String stColor = (PieceSquareColor.WHITE.equals(color) ? "--B--" : "--N--");
 
-		int col = piece.getColonne() -'a';
-		int lig = piece.getLigne() -1;
-		damier[lig][col ] = stColor ;
+			int col = piece.getColonne() - 'a';
+			int lig = piece.getLigne() - 1;
+			damier[lig][col] = stColor;
 		}
 
 		// Affichage du tableau formatte

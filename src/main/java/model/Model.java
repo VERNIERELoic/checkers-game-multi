@@ -147,7 +147,7 @@ public class Model implements BoardGame<Coord> {
 	 */
 	private Coord getToCapturePieceCoord(Coord toMovePieceCoord, Coord targetSquareCoord) {
 		Coord toCapturePieceCoord = null;
-
+		
 		// TODO Atelier 2
 
 		return toCapturePieceCoord;
