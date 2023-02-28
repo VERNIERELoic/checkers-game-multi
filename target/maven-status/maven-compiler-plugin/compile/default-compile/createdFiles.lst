@@ -1,11 +1,8 @@
-model/ModelImplementor.class
 gui/CheckersPieceGui.class
 model/ModelConfig.class
 gui/SquareGui.class
-launcher/Launcher.class
 controller/Mediator.class
 model/ModelFactory.class
-model/Model.class
 gui/GuiConfig.class
 nutsAndBolts/PieceSquareColor.class
 gui/CheckersSquareGui.class
@@ -14,7 +11,6 @@ controller/OutputModelData.class
 gui/View.class
 model/PieceModel.class
 controller/InputViewData.class
-model/TestModel.class
 model/TestCollection.class
 controller/localController/Controller.class
 model/Coord.class

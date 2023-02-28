@@ -28,7 +28,6 @@ public class ModelImplementor {
 
 	public ModelImplementor() {
 		super();
-
 		pieces = ModelFactory.createPieceModelCollection();
 	}
 
@@ -82,8 +81,24 @@ public class ModelImplementor {
 	}
 
 	public List<Coord> getCoordsOnItinerary(Coord initCoord, Coord targetCoord) {
-		//Atelier 2
-		return new LinkedList<Coord>();
+		List<Coord> coordsOnItinery = new LinkedList<Coord>();
+
+		int directionY = (targetCoord.getLigne() - initCoord.getLigne() > 0) ? 1 : -1;
+		int directionX = (targetCoord.getColonne() - initCoord.getColonne() > 0) ? 1 : -1;
+
+		int ligne = initCoord.getLigne() + directionX;
+		int colonne = initCoord.getColonne() + directionY;
+
+		while (ligne != targetCoord.getLigne() && colonne != targetCoord.getColonne()) {
+			char charCol = (char) (colonne + 97);
+			Coord currCase = new Coord(charCol, ligne);
+			coordsOnItinery.add(currCase);
+			ligne += directionX;
+			colonne += directionY;
+		}
+
+		return coordsOnItinery;
+
 	}
 
 	/**

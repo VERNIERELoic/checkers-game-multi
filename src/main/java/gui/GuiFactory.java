@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import javafx.geometry.Insets;
+import javafx.scene.ImageCursor;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -91,8 +92,6 @@ public class GuiFactory {
 	 */
 	public static void PromotePiece(ImageView piece, PieceSquareColor promotedPieceColor) {
 
-		// ToDo Atelier 3
-		
 	}
 	
 	/**

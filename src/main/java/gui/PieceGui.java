@@ -17,14 +17,11 @@ public class PieceGui extends ImageView implements CheckersPieceGui {
 	public PieceGui(Image image, PieceSquareColor color) {
 		this.color = color;
 		setImage(image);
-
 	}
 
 	@Override
 	public void promote(Image image) {
-
-		// ToDo Atelier 2, utile pour Atelier 3
-
+		setImage(image);
 	}
 
 	@Override

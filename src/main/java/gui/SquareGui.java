@@ -22,11 +22,10 @@ import nutsAndBolts.PieceSquareColor;
  */
 class SquareGui extends BorderPane implements CheckersSquareGui {
 	
-	private PieceSquareColor squareColor;    		// le carre est Noir ou Blanc
+	private PieceSquareColor squareColor;		// le carre est Noir ou Blanc
 
 	public SquareGui (PieceSquareColor squareColor) {
 		this.squareColor = squareColor;
-		
 	}
 	
 	/**
