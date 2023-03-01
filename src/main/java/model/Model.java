@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Collection;
 import java.util.List;
 
 import controller.OutputModelData;
@@ -131,8 +132,14 @@ public class Model implements BoardGame<Coord> {
 	 *         ou pas de piece e prendre
 	 */
 	private boolean isThereMaxOnePieceOnItinerary(Coord toMovePieceCoord, Coord targetSquareCoord) {
-		boolean isThereMaxOnePieceOnItinerary = false; // TODO Atelier 2 - initialiser e false
-
+		boolean isThereMaxOnePieceOnItinerary = false;
+		int i = 0;
+		for (Coord coord : implementor.getCoordsOnItinerary(toMovePieceCoord, targetSquareCoord)) {
+			if (implementor.isPiecehere(coord) && i < 1) {
+				isThereMaxOnePieceOnItinerary = true;
+				i += 1;
+			}
+		}
 		return isThereMaxOnePieceOnItinerary;
 	}
 
@@ -143,9 +150,11 @@ public class Model implements BoardGame<Coord> {
 	 */
 	private Coord getToCapturePieceCoord(Coord toMovePieceCoord, Coord targetSquareCoord) {
 		Coord toCapturePieceCoord = null;
-
-		// TODO Atelier 2
-
+		if (isThereMaxOnePieceOnItinerary(toMovePieceCoord, targetSquareCoord)) {
+			for (Coord coord : implementor.getCoordsOnItinerary(toMovePieceCoord, targetSquareCoord)) {
+				toCapturePieceCoord = coord;
+			}
+		}
 		return toCapturePieceCoord;
 	}
 
@@ -159,13 +168,7 @@ public class Model implements BoardGame<Coord> {
 	 *         est capable de repondre ecette question (par l'intermediare du
 	 *         ModelImplementor)
 	 */
-	boolean isMovePiecePossible(Coord toMovePieceCoord, Coord targetSquareCoord, boolean isPieceToCapture) { // TODO :
-																												// remettre
-																												// en
-																												// "private"
-																												// apres
-																												// test
-																												// unitaires
+	boolean isMovePiecePossible(Coord toMovePieceCoord, Coord targetSquareCoord, boolean isPieceToCapture) { // unitaires
 		return this.implementor.isMovePieceOk(toMovePieceCoord, targetSquareCoord, isPieceToCapture);
 	}
 

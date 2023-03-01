@@ -10,7 +10,7 @@ import nutsAndBolts.PieceSquareColor;
  *
  *le mode de deplacement et de prise de la reine est different de celui du pion
  */
-public class QueenModel implements PieceModel {
+public class QueenModel extends AbstractPieceModel implements PieceModel{
 
 	public QueenModel(Coord coord, PieceSquareColor pieceColor) {
 		super();

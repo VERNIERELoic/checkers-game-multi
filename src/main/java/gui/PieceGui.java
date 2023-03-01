@@ -27,9 +27,10 @@ public class PieceGui extends ImageView implements CheckersPieceGui {
 	@Override
 	public boolean hasSameColorAsGamer(PieceSquareColor gamerColor) {
 
-		// ToDo Atelier 2, utile pour Atelier 4
-
-		return false; // A changer
+		if (gamerColor == color)
+			return true;
+		else
+			return false; // A changer
 	}
 
 }
